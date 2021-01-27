@@ -40,5 +40,4 @@ export const UserName = styled.div`
     font-size: 15px;
     font-weight: 700;
 
-    list-style: none;
 `

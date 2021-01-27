@@ -1,0 +1,27 @@
+const [ name, setName ] = useState('')
+  const [ email, setEmail ] = useState('')
+  const [ gender, setGender ] = useState('')
+  const [ birthDate, setBirthDate ] = useState('')
+  const [ CPF, setCPF ] = useState('')  
+  const [ startDate, setstartDate ] = useState('')  
+  const [ team, setTeam ] = useState('') 
+
+<Container>
+         <form>
+
+            <input placeholder="Nome *" />
+            <input type="email" placeholder="email *" />
+            <input type="CPF" placeholder="CPF *" />
+
+            <div className="input-group">
+              <input placeholder="Birth Date *" />
+              <input placeholder="gender *" />
+            </div>
+
+            <input type="text" placeholder="start date *" />
+            <input type="text" placeholder="Team" />
+
+            <button>Registry</button>
+
+        </form>
+      </Container>

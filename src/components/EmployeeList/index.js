@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Employeeitem from '../EmployeeItem';
+//import FormRegistry from '../FormRegistry';
 
-import { Container, Title } from './styles';
+import { Container, Title, Header } from './styles';
 
 import db from '../../db.json';
 
@@ -9,8 +10,13 @@ function EmployeeList() {
 
   return (
     <Container>
-
-      <Title>Nutcache Employee Database</Title>
+      <Header>
+        <Title>Nutcache Employee Database</Title>
+        <button className="buttonNewUser">
+          NewUser
+        </button>
+      </Header>
+      
 
       <ul>
         {db.map(db => (

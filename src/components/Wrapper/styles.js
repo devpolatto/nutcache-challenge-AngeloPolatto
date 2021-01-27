@@ -26,9 +26,7 @@ export const Header = styled.div`
     display: flex;
     justify-content: center;
 
-    border-bottom: 1px solid #252627;
-
     img{
-        width: 300px
+        width: 200px
     }
 `
