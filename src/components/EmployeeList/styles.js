@@ -18,4 +18,5 @@ export const Container = styled.div`
 
 export const Title = styled.header`
   font-size: 24px;
+  border-bottom: 1px solid 
 `

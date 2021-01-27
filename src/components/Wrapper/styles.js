@@ -13,6 +13,8 @@ export const Container = styled.div`
   background: ${colors.One};
 
   border-radius: 10px;
+
+  box-shadow: 0 0 0.75rem #837676;
 `;
 
 export const Header = styled.div`
