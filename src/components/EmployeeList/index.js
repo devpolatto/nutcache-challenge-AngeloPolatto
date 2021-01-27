@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Employeeitem from '../EmployeeItem';
+import Popup from '../Popup';
 //import FormRegistry from '../FormRegistry';
 
 import { Container, Title, Header } from './styles';
@@ -8,13 +9,18 @@ import db from '../../db.json';
 
 function EmployeeList() {
 
+  const [isOpen, setIsOpen] = useState(false)
+
+  const togglePopup = () => { setIsOpen(!isOpen) }
+
   return (
     <Container>
       <Header>
         <Title>Nutcache Employee Database</Title>
-        <button className="buttonNewUser">
+        <button className="buttonNewUser" onClick={togglePopup}>
           NewUser
         </button>
+        {isOpen ? <Popup toggle={togglePopup}/> : null}
       </Header>
       
 
