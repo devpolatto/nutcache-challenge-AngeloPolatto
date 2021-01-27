@@ -11,7 +11,7 @@ export default class PopUp extends Component {
             <Modal>
                 <Box>
                     <span className="close-icon" onClick={this.handleClick}>&times;</span>
-                    <p>Popup</p>
+                    {this.props.content}
                 </Box>
             </Modal>
                 

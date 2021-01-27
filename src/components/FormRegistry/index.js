@@ -8,19 +8,22 @@ function FormRegistry() {
       <Container>
         <form>
 
-          <input placeholder="Nome *" />
+          <input type="text"placeholder="Nome *" />
           <input type="email" placeholder="email *" />
           <input type="CPF" placeholder="CPF *" />
 
           <div className="input-group">
-            <input placeholder="Birth Date *" />
-            <input placeholder="gender *" />
+            <input type="date" placeholder="Birth Date *" />
+            <select name="select">
+              <option value="masculine">masculine</option>
+              <option value="feminine">feminine</option>
+              <option value="neuter">neuter</option>
+            </select>
           </div>
 
-          <input type="text" placeholder="start date *" />
+          <input type="text" placeholder="start date " />
           <input type="text" placeholder="Team" />
 
-          <button>Registry</button>
 
         </form>
       </Container>

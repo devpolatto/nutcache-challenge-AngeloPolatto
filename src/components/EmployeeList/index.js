@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Employeeitem from '../EmployeeItem';
 import Popup from '../Popup';
-//import FormRegistry from '../FormRegistry';
+import FormRegistry from '../FormRegistry';
 
 import { Container, Title, Header } from './styles';
 
@@ -20,7 +20,7 @@ function EmployeeList() {
         <button className="buttonNewUser" onClick={togglePopup}>
           NewUser
         </button>
-        {isOpen ? <Popup toggle={togglePopup}/> : null}
+        {isOpen ? <Popup toggle={togglePopup} content={<FormRegistry/>}/> : null}
       </Header>
       
 
