@@ -56,7 +56,45 @@ export const Container = styled.div`
       padding-left: 5px;
     }
 
-    .input-group select {
+    .input-group {
+      width: 70%;
+      display: flex;
+      flex-direction: row;
+
+      margin-bottom: 5px;
+
+      .date {
+        display: flex;
+        flex-direction: column;
+
+        margin-right: 10px;
+
+        input {
+          height: 40px;
+          border: none;
+          border-radius: 7px;
+          background: #efeeee;
+          padding-left: 5px;
+        }
+      }
+
+      .gender{
+        display: flex;
+        flex-direction: column;
+
+        select{
+          height: 40px;
+          border: none;
+          border-radius: 7px;
+          background: #efeeee;
+          padding-left: 5px;
+        }
+
+      }
+
+    }
+
+    .input-group .date select {
         border: none;
         border-radius: 7px;
         background: #efeeee;
@@ -65,8 +103,13 @@ export const Container = styled.div`
     .input-group{
       display: flex;
       
-      margin-bottom: 5px;
+      
     }
+  }
+
+  .input-goup .gender {
+    display: flex;
+    flex-direction: column;
   }
   
   button{

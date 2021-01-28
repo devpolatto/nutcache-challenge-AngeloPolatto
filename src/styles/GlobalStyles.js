@@ -27,6 +27,10 @@ const GlobalStyle = createGlobalStyle`
     ul {
         list-style: none;
     }
+
+    label {
+        font-size: 12px;
+    }
   
   
     @media(min-width: 700px) {
