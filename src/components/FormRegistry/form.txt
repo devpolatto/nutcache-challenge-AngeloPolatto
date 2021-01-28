@@ -1,7 +1,0 @@
-const [ name, setName ] = useState('')
-  const [ email, setEmail ] = useState('')
-  const [ gender, setGender ] = useState('')
-  const [ birthDate, setBirthDate ] = useState('')
-  const [ CPF, setCPF ] = useState('')  
-  const [ startDate, setstartDate ] = useState('')  
-  const [ team, setTeam ] = useState('') 
