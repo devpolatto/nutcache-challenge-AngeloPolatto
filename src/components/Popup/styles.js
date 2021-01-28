@@ -17,7 +17,7 @@ export const Box = styled.div`
     max-height: 70vh;
     margin-top: calc(100vh - 85vh - 20px);
     background: #fff;
-    border-radius: 4px;
+    border-radius: 10px;
     padding: 20px;
     border: 1px solid #999;
     overflow: auto;
@@ -26,15 +26,22 @@ export const Box = styled.div`
         content: 'x';
         cursor: pointer;
         position: fixed;
-        right: calc(15% - 30px);
+        right: calc(15% + 250px);
         top: calc(100vh - 85vh - 33px);
         background: #ededed;
-        width: 25px;
-        height: 25px;
+        width: 30px;
+        height: 30px;
         border-radius: 50%;
-        line-height: 20px;
+        line-height: 28px;
         text-align: center;
         border: 1px solid #999;
-        font-size: 20px;
-      }
+        font-size: 25px;
+    }
+
+    @media(max-width: 700px) {
+        padding: 1px0 5px;
+    }
+    @media(min-width: 1000px){
+        width: 500px;
+    }
 `
