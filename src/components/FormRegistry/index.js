@@ -55,7 +55,7 @@ function FormRegistry() {
 
           <div className="startDate">
             <label for="startDate">Start Date</label>
-            <input type="date" value={startDate} onChange={e => setBirthDate(e.target.value)} />
+            <input type="date" value={startDate} onChange={e => setStartDate(e.target.value)} />
           </div>
 
           <button type="submit" name="registry">Registry</button>
