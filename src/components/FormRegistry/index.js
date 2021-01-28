@@ -45,7 +45,7 @@ function FormRegistry() {
             </div>
             <div className="team">
               <label for="team">Team</label>
-              <select name="team" value={team} onChange={e => setGender(e.target.value)}>
+              <select name="team" value={team} onChange={e => setTeam(e.target.value)}>
                 <option value="front-end">Front-End</option>
                 <option value="back-end">Back-End</option>
                 <option value="mobile">Mobile</option>
