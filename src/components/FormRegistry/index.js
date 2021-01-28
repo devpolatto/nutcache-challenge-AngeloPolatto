@@ -6,6 +6,9 @@ function FormRegistry() {
 
   return (
       <Container>
+
+        <h2>Resgistry New User</h2>
+
         <form>
 
           <input type="text"placeholder="Nome *" />
@@ -24,6 +27,8 @@ function FormRegistry() {
           <input type="text" placeholder="start date " />
           <input type="text" placeholder="Team" />
 
+          
+          <button type="submit" name="registry">Registry</button>
 
         </form>
       </Container>

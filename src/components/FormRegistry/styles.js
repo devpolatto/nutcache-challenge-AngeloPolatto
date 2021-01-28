@@ -4,12 +4,16 @@ export const Container = styled.div`
   width: 100%;
 
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 
   color: black;
 
   form {
     width: 80%;
+
+    margin-top: 20px;
 
     display: flex;
     aling-items: center;
@@ -37,12 +41,25 @@ export const Container = styled.div`
       width: 100%;
       height: 40px;
       margin-bottom: 5px;
+      border: none;
+      border-radius: 7px;
+      background: #efeeee;
+      padding-left: 5px;
     }
-
-
 
     .input-group input:nth-child(1) {
       margin-right: 10px;
+      height: 40px;
+      border: none;
+      border-radius: 7px;
+      background: #efeeee;
+      padding-left: 5px;
+    }
+
+    .input-group select {
+        border: none;
+        border-radius: 7px;
+        background: #efeeee;
     }
 
     .input-group{
@@ -51,7 +68,15 @@ export const Container = styled.div`
       margin-bottom: 5px;
     }
   }
-
+  
+  button{
+    height: 50px;
+    color: #ffff;
+    background: #54cec8;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+  }
 `;
 
 
