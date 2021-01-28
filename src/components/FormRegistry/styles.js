@@ -11,7 +11,7 @@ export const Container = styled.div`
   color: black;
 
   form {
-    width: 80%;
+    width: 100%;
 
     margin-top: 20px;
 
