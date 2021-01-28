@@ -57,13 +57,14 @@ export const Container = styled.div`
     }
 
     .input-group {
-      width: 70%;
+      width: 100%;
       display: flex;
       flex-direction: row;
 
       margin-bottom: 5px;
 
       .date {
+        width: 100%;
         display: flex;
         flex-direction: column;
 
@@ -79,6 +80,23 @@ export const Container = styled.div`
       }
 
       .gender{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        margin-right: 10px;
+
+        select{
+          height: 40px;
+          border: none;
+          border-radius: 7px;
+          background: #efeeee;
+          padding-left: 5px;
+        }
+      }
+
+      .team{
+        width: 100%;
         display: flex;
         flex-direction: column;
 
@@ -89,28 +107,27 @@ export const Container = styled.div`
           background: #efeeee;
           padding-left: 5px;
         }
-
       }
 
     }
 
-    .input-group .date select {
-        border: none;
-        border-radius: 7px;
-        background: #efeeee;
-    }
-
-    .input-group{
+    .startDate {
       display: flex;
-      
-      
+      flex-direction: column;
+
+      margin-bottom: 5px;
     }
+
+    input {
+      height: 40px;
+      border: none;
+      border-radius: 7px;
+      background: #efeeee;
+      padding-left: 5px;
+    }
+
   }
 
-  .input-goup .gender {
-    display: flex;
-    flex-direction: column;
-  }
   
   button{
     height: 50px;

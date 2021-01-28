@@ -38,17 +38,26 @@ function FormRegistry() {
             <div className="gender">
               <label for="gender">Your Gender</label>
               <select name="gender" value={gender} onChange={e => setGender(e.target.value)}>
-                <option value="masculine">masculine</option>
-                <option value="feminine">feminine</option>
-                <option value="neuter">neuter</option>
+                <option value="masculine">Masculine</option>
+                <option value="feminine">Feminine</option>
+                <option value="neuter">Neuter</option>
+              </select>
+            </div>
+            <div className="team">
+              <label for="team">Team</label>
+              <select name="team" value={team} onChange={e => setGender(e.target.value)}>
+                <option value="front-end">Front-End</option>
+                <option value="back-end">Back-End</option>
+                <option value="mobile">Mobile</option>
               </select>
             </div>
           </div>
 
-          <input type="text" value={startDate} placeholder="start date " onChange={e => setStartDate(e.target.value)} />
-          <input type="text" value={team} placeholder="Team" onChange={e => setTeam(e.target.value)} />
+          <div className="startDate">
+            <label for="startDate">Start Date</label>
+            <input type="date" value={startDate} onChange={e => setBirthDate(e.target.value)} />
+          </div>
 
-          
           <button type="submit" name="registry">Registry</button>
 
         </form>
