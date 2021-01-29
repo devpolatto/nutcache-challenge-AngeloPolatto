@@ -5,6 +5,6 @@
         "tertiary": "#efeeee"
     },
     
-    "URL": "https://crudcrud.com/api/",
+    "URL": "http://192.168.52.7:3333",
     "Token": "27e3bc1dec4945408ed2792d4dd01b79"
 }

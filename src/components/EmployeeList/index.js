@@ -9,13 +9,13 @@ import { Container, Title, Header } from './styles';
 
 function EmployeeList() {
 
-  const [userName, setUserName] = useState([]);
+  const [user, setUser] = useState([]);
 
   useEffect(() => {
-    const response  = API.get('/newuser').then(response => {
-      setUserName(response.data)
+    API.get('/user').then( response => {
+      setUser(response.data)
     })
-  }, [userName])
+  }, [user])
 
   const [isOpen, setIsOpen] = useState(false)
 
@@ -32,9 +32,9 @@ function EmployeeList() {
       </Header>
 
       <ul>
-        {userName.map(userName => (
-          <li key={userName._id}>
-            <Employeeitem userName={userName.name}/>
+        {user.map(user => (
+          <li key={user.id}>
+            <Employeeitem userName={user.name}/>
           </li>
         ))}
       </ul>
