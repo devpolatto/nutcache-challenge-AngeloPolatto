@@ -45,4 +45,5 @@ export const Header = styled.div`
 `
 export const Title = styled.header`
   font-size: 24px;
+  font-family: 'Lato', sans-serif;
 `

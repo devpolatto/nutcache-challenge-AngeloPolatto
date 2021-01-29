@@ -2,7 +2,11 @@
     "color": {
         "primary": "#008AB8",
         "secondary": "#54cec8",
-        "tertiary": "#efeeee"
+        "tertiary": "#efeeee",
+        "quaternary": "#D2D2DA",
+        "quinary": "#F3F8F2",
+        "senary": "#DE172E",
+        "septenary": "#B91327"
     },
     
     "URL": "http://192.168.52.7:3333",
