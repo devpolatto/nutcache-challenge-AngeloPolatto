@@ -3,5 +3,8 @@
         "primary": "#008AB8",
         "secondary": "#54cec8",
         "tertiary": "#efeeee"
-    }
+    },
+    
+    "URL": "https://crudcrud.com/api/",
+    "Token": "27e3bc1dec4945408ed2792d4dd01b79"
 }
