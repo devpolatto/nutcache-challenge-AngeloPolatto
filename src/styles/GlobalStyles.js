@@ -26,10 +26,12 @@ const GlobalStyle = createGlobalStyle`
     }
 
     label {
+        font-family: 'Lato', sans-serif;
         font-size: 12px;
     }
 
     input {
+        font-family: 'Lato', sans-serif;
         width: 100%;
         height: 40px;
         border: none;
