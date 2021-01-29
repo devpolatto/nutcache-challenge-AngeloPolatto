@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import API from '../../services/api';
 
 import { Container } from './styles';
 
@@ -13,8 +14,18 @@ function FormRegistry() {
   const [ team , setTeam ] = useState('');
 
   async function handleNewUser(e) {
+
+    e.preventDefault();
     
     const data = { name, email, cpf, birthDate, gender, startDate, team }
+
+    try{
+      const response = await API.post('/newuser', data);
+      alert(`seu nome: ${ response.data.name }`)
+    } catch(err) {
+      alert('erro no cadastro, tente novamente')
+      console.log(err)
+    }
 
     return console.log(data)
   }
