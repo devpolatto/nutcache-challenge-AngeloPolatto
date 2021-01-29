@@ -1,13 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Employeeitem from '../EmployeeItem';
 import Popup from '../Popup';
 import FormRegistry from '../FormRegistry';
 
+import API from '../../services/api';
+
 import { Container, Title, Header } from './styles';
 
-import db from '../../db.json';
-
 function EmployeeList() {
+
+  const [userName, setUserName] = useState([]);
+
+  useEffect(() => {
+    const response  = API.get('/newuser').then(response => {
+      setUserName(response.data)
+    })
+  }, [userName])
 
   const [isOpen, setIsOpen] = useState(false)
 
@@ -22,12 +30,11 @@ function EmployeeList() {
         </button>
         {isOpen ? <Popup toggle={togglePopup} content={<FormRegistry/>}/> : null}
       </Header>
-      
 
       <ul>
-        {db.map(db => (
-          <li key={db.id}>
-            <Employeeitem userName={db.Name}/>
+        {userName.map(userName => (
+          <li key={userName._id}>
+            <Employeeitem userName={userName.name}/>
           </li>
         ))}
       </ul>
