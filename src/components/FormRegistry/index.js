@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import API from '../../services/api';
 
-import { Container } from './styles';
+import { Container, TitleForm, LabelForm } from './styles';
 
 function FormRegistry() {
 
@@ -19,7 +19,7 @@ function FormRegistry() {
 
     try{
       const response = await API.post('/newuser', data);
-      alert(`seu nome: ${ response.data.name }`)
+      alert(`usuario ${ response.data.name } registrado`)
     } catch(err) {
       alert('erro no cadastro, tente novamente')
       console.log(err)
@@ -30,30 +30,32 @@ function FormRegistry() {
   return (
       <Container>
 
-        <h2>Resgistry New User</h2>
+        <TitleForm>Registry new user</TitleForm>
 
         <form onSubmit={handleNewUser}>
 
-          <input type="text" placeholder="Nome *" value={name} onChange={e => setName(e.target.value)} />
-          <input type="email" value={email} placeholder="email *" onChange={e => setEmail(e.target.value)} />
-          <input type="CPF" value={cpf} placeholder="CPF *" onChange={e => setCPF(e.target.value)} />
+          <input type="text" placeholder="Nome"  value={name} required onChange={e => setName(e.target.value)} />
+          <input type="email" placeholder="email" value={email} required onChange={e => setEmail(e.target.value)} />
+          <input type="text" placeholder="CPF 000000-00" value={cpf} required onChange={e => setCPF(e.target.value)} />
 
           <div className="input-group">
             <div className="date">
-              <label>Your Birth Date</label>
-              <input type="date" value={birthDate} placeholder="Birth Date *" onChange={e => setBirthDate(e.target.value)} />
+              <LabelForm>Your Birth Date</LabelForm>
+              <input type="date" value={birthDate} placeholder="Birth Date" required onChange={e => setBirthDate(e.target.value)} />
             </div>
             <div className="gender">
-              <label>Your Gender</label>
-              <select name="gender" value={gender} onChange={e => setGender(e.target.value)}>
+              <LabelForm>Your Gender</LabelForm>
+              <select name="gender" value={gender} required onChange={e => setGender(e.target.value)}>
+                <option value="" selected disabled hidden >Chose here</option>
                 <option value="masculine">Masculine</option>
                 <option value="feminine">Feminine</option>
                 <option value="neuter">Neuter</option>
               </select>
             </div>
             <div className="team">
-              <label>Team</label>
-              <select name="team" value={team} onChange={e => setTeam(e.target.value)}>
+              <LabelForm>Team</LabelForm>
+              <select name="team" value={team} required onChange={e => setTeam(e.target.value)}>
+                <option value="" selected disabled hidden >Chose here</option>
                 <option value="front-end">Front-End</option>
                 <option value="back-end">Back-End</option>
                 <option value="mobile">Mobile</option>

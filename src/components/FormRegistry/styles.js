@@ -22,6 +22,8 @@ export const Container = styled.div`
     flex-direction: column;
 
     > input {
+      font-size: 15px;
+      font-family: 'Lato', sans-serif;
       margin-bottom: 5px;
     }
 
@@ -75,4 +77,10 @@ export const Container = styled.div`
   }
 `;
 
+export const TitleForm = styled.h1`
+  font-family: 'Lato', sans-serif;
+`
+export const LabelForm = styled(TitleForm)`
+  font-size: 15px;
+`
 
