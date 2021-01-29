@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import config from '../../config.json';
 
 export const Container = styled.div`
   width: 100%;
@@ -35,20 +36,14 @@ export const Header = styled.div`
       border: none;
       border-radius: 7px;
 
-      background: #008AB8;
+      background: ${config.color.primary};
       color: #ffff;
 
       transition: 0.3s;
-
-      &:hover{
-        backgorund: #47D1FF;
-      }
     }
 
-    .buttonNewUser:hover{
-      background: #47D1FF;
-    }
 `
 export const Title = styled.header`
   font-size: 24px;
+  font-family: 'Lato', sans-serif;
 `

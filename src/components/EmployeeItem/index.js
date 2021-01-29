@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, UserName } from './styles';
+import { Container, UserName, editButton } from './styles';
 
 function EmployeeItem(props) {
 
@@ -9,11 +9,8 @@ function EmployeeItem(props) {
       <Container>
           <UserName>{props.userName}</UserName>
           <div className="options">
-              <button >
-                Editar
-              </button>
-                    
-              <button>Deletar</button>
+              <button className="btn-edit">Edit</button>
+              <button className="btn-delite">Delite</button>
           </div>
       </Container>
   );

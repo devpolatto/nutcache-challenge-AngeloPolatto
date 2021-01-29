@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import config from '../../config.json';
 
 export const Container = styled.div`
   width: 100%;
@@ -20,40 +21,10 @@ export const Container = styled.div`
     justify-content: space-around;
     flex-direction: column;
 
-    .buttonNewUser{
-      width: 80px;
-      height: 30px;
-
-      border: none;
-      border-radius: 7px;
-
-      background: #008AB8;
-      color: #ffff;
-
-      transition: 0.3s;
-
-      &:hover{
-        backgorund: #47D1FF;
-      };
-    }
-
     > input {
-      width: 100%;
-      height: 40px;
+      font-size: 15px;
+      font-family: 'Lato', sans-serif;
       margin-bottom: 5px;
-      border: none;
-      border-radius: 7px;
-      background: #efeeee;
-      padding-left: 5px;
-    }
-
-    .input-group input:nth-child(1) {
-      margin-right: 10px;
-      height: 40px;
-      border: none;
-      border-radius: 7px;
-      background: #efeeee;
-      padding-left: 5px;
     }
 
     .input-group {
@@ -69,46 +40,18 @@ export const Container = styled.div`
         flex-direction: column;
 
         margin-right: 10px;
-
-        input {
-          height: 40px;
-          border: none;
-          border-radius: 7px;
-          background: #efeeee;
-          padding-left: 5px;
-        }
       }
-
       .gender{
         width: 100%;
         display: flex;
         flex-direction: column;
-
         margin-right: 10px;
-
-        select{
-          height: 40px;
-          border: none;
-          border-radius: 7px;
-          background: #efeeee;
-          padding-left: 5px;
-        }
       }
-
       .team{
         width: 100%;
         display: flex;
         flex-direction: column;
-
-        select{
-          height: 40px;
-          border: none;
-          border-radius: 7px;
-          background: #efeeee;
-          padding-left: 5px;
-        }
       }
-
     }
 
     .startDate {
@@ -117,26 +60,27 @@ export const Container = styled.div`
 
       margin-bottom: 5px;
     }
-
-    input {
-      height: 40px;
-      border: none;
-      border-radius: 7px;
-      background: #efeeee;
-      padding-left: 5px;
-    }
-
   }
 
-  
   button{
     height: 50px;
     color: #ffff;
-    background: #54cec8;
+    background: ${config.color.secondary};
     border-radius: 8px;
     border: none;
     cursor: pointer;
+    transition: 0.3s;
+
+    &:hover{
+      background: ${config.color.primary}
+    }
   }
 `;
 
+export const TitleForm = styled.h1`
+  font-family: 'Lato', sans-serif;
+`
+export const LabelForm = styled(TitleForm)`
+  font-size: 15px;
+`
 
