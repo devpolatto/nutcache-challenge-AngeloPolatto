@@ -14,9 +14,7 @@ function FormRegistry() {
   const [ team , setTeam ] = useState('');
 
   async function handleNewUser(e) {
-
     e.preventDefault();
-    
     const data = { name, email, cpf, birthDate, gender, startDate, team }
 
     try{
@@ -26,7 +24,6 @@ function FormRegistry() {
       alert('erro no cadastro, tente novamente')
       console.log(err)
     }
-
     return console.log(data)
   }
 

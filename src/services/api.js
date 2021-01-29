@@ -1,7 +1,7 @@
 import axios from 'axios';
 import config from '../config.json';
 
-const URL = config.Token;
+const URL = config.URL;
 const Token = config.Token;
 
 const api = axios.create({
