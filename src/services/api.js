@@ -1,7 +1,11 @@
 import axios from 'axios';
+import config from '../config.json';
+
+const URL = config.Token;
+const Token = config.Token;
 
 const api = axios.create({
-   baseURL: 'https://crudcrud.com/api/0bc7c0b6ceb246df9e1434488747b9dc',
+   baseURL: URL+Token,
 })
 
 export default api;
