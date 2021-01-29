@@ -1,10 +1,7 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
+import config from '../config.json';
 
 const GlobalStyle = createGlobalStyle`
-    
-    #root {
-        
-    }
 
     *{
         margin: 0;
@@ -30,6 +27,23 @@ const GlobalStyle = createGlobalStyle`
 
     label {
         font-size: 12px;
+    }
+
+    input {
+        width: 100%;
+        height: 40px;
+        border: none;
+        border-radius: 7px;
+        background: ${config.color.tertiary};
+        padding-left: 5px;
+    }
+
+    select {
+        height: 40px;
+        background: ${config.color.tertiary};
+        border: none;
+        border-radius: 7px;
+        padding-left: 5px;
     }
   
   
