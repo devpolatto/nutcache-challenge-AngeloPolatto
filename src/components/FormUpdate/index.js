@@ -9,9 +9,12 @@ function FormUpdate() {
             <TitleForm>User registration</TitleForm>
 
             <form>
-                <input type="text" placeholder="Nome" required />
-                <input type="email" placeholder="email" required />
-                <input type="text" placeholder="CPF 000000-00" required />
+                <LabelForm>Your Name</LabelForm>
+                <input type="text" required />
+                <LabelForm>Your E-mail</LabelForm>
+                <input type="email" required />
+                <LabelForm>Your CPF</LabelForm>
+                <input type="text" placeholder="Ex: 000000-00" required />
 
                 <div className="input-group">
                     <div className="date">
@@ -39,7 +42,7 @@ function FormUpdate() {
                 </div>
 
                 <div className="startDate">
-                    <label>Start Date</label>
+                    <LabelForm>Start Date</LabelForm>
                     <input type="date" />
                 </div>
 

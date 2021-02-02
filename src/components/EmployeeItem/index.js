@@ -8,12 +8,16 @@ import { Container, UserName, editButton } from './styles';
 
 function EmployeeItem(props) {
 
+    const IdUser = props.propID;
+
     const [isOpenEdit, setIsOpenEdit] = useState(false)
     const [isOpenDelete, setIsOpenDelete] = useState(false)
 
     const togglePopupEdit = () => { setIsOpenEdit(!isOpenEdit) }
-    const togglePopupDelete = () => { setIsOpenDelete(!isOpenDelete) }
-
+    const togglePopupDelete = () => { 
+        console.log(IdUser)
+        setIsOpenDelete(!isOpenDelete)  
+    }
 
   return (
       <Container>

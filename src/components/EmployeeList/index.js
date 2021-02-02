@@ -36,7 +36,7 @@ function EmployeeList() {
       <ul>
         {db.map(db => (
           <li key={db.id}>
-            <Employeeitem userName={db.Name}/>
+            <Employeeitem propID={db.id} userName={db.Name}/>
           </li>
         ))}
       </ul>
