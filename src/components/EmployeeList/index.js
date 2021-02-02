@@ -11,7 +11,7 @@ import { Container, Title, Header } from './styles';
 
 function EmployeeList() {
 
-  const [user, setUser] = useState([]);
+  // const [user, setUser] = useState([]);
 
   // useEffect(() => {
   //   API.get('/user').then( response => {
