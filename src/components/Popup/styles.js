@@ -18,7 +18,7 @@ export const Box = styled.div`
     margin-top: calc(100vh - 85vh - 20px);
     background: #fff;
     border-radius: 10px;
-    padding: 25px 20px;
+    padding: 20px 20px;
     border: 1px solid #999;
     overflow: hidden;
 
