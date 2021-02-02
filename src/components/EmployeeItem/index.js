@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Popup from '../Popup';
 
+import PopupConfirm from '../PopupConfirm';
+
 import { Container, UserName, editButton } from './styles';
 
 function EmployeeItem(props) {
@@ -20,7 +22,7 @@ function EmployeeItem(props) {
               {isOpenEdit ? <Popup toggle={togglePopupEdit} content={<h2>Edit</h2>}/> : null}
               
               <button className="btn-delite" onClick={togglePopupDelete}>Delite</button>
-              {isOpenDelete ? <Popup toggle={togglePopupDelete} content={<h2>Delete</h2>}/> : null}
+              {isOpenDelete ? <Popup toggle={togglePopupDelete} content={<PopupConfirm/>}/> : null}
           </div>
       </Container>
   );
