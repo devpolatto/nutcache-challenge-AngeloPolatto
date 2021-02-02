@@ -18,9 +18,9 @@ export const Box = styled.div`
     margin-top: calc(100vh - 85vh - 20px);
     background: #fff;
     border-radius: 10px;
-    padding: 20px;
+    padding: 25px 20px;
     border: 1px solid #999;
-    overflow: auto;
+    overflow: hidden;
 
     .close-icon {
         content: 'x';
@@ -39,7 +39,7 @@ export const Box = styled.div`
     }
 
     @media(max-width: 700px) {
-        padding: 1px0 5px;
+        padding: 1px 5px;
     }
     @media(min-width: 1000px){
         width: 500px;
