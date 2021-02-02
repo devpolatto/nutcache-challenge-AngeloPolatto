@@ -3,7 +3,9 @@ import Employeeitem from '../EmployeeItem';
 import Popup from '../Popup';
 import FormRegistry from '../FormRegistry';
 
-import API from '../../services/api';
+import db from '../../db.json';
+
+// import API from '../../services/api';
 
 import { Container, Title, Header } from './styles';
 
@@ -11,11 +13,11 @@ function EmployeeList() {
 
   const [user, setUser] = useState([]);
 
-  useEffect(() => {
-    API.get('/user').then( response => {
-      setUser(response.data)
-    })
-  }, [user])
+  // useEffect(() => {
+  //   API.get('/user').then( response => {
+  //     setUser(response.data)
+  //   })
+  // }, [user])
 
   const [isOpen, setIsOpen] = useState(false)
 
@@ -32,9 +34,9 @@ function EmployeeList() {
       </Header>
 
       <ul>
-        {user.map(user => (
-          <li key={user.id}>
-            <Employeeitem userName={user.name}/>
+        {db.map(db => (
+          <li key={db.id}>
+            <Employeeitem userName={db.Name}/>
           </li>
         ))}
       </ul>
