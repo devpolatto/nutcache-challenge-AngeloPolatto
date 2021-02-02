@@ -34,9 +34,12 @@ function FormRegistry() {
 
         <form onSubmit={handleNewUser}>
 
-          <input type="text" placeholder="Nome"  value={name} required onChange={e => setName(e.target.value)} />
-          <input type="email" placeholder="email" value={email} required onChange={e => setEmail(e.target.value)} />
-          <input type="text" placeholder="CPF 000000-00" value={cpf} required onChange={e => setCPF(e.target.value)} />
+          <LabelForm>Your Name</LabelForm>
+          <input type="text" value={name} required onChange={e => setName(e.target.value)} />
+          <LabelForm>Your E-mail</LabelForm>
+          <input type="email" value={email} required onChange={e => setEmail(e.target.value)} />
+          <LabelForm>Your CPF</LabelForm>
+          <input type="text" placeholder="EX: 000000-00" value={cpf} required onChange={e => setCPF(e.target.value)} />
 
           <div className="input-group">
             <div className="date">
@@ -64,7 +67,7 @@ function FormRegistry() {
           </div>
 
           <div className="startDate">
-            <label>Start Date</label>
+            <LabelForm>Start Date</LabelForm>
             <input type="date" value={startDate} onChange={e => setStartDate(e.target.value)} />
           </div>
 
