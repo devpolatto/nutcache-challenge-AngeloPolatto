@@ -16,9 +16,10 @@ function EmployeeItem(props) {
       <Container>
           <UserName>{props.userName}</UserName>
           <div className="options">
-              <button className="btn-edit">Edit</button>
+              <button className="btn-edit" onClick={togglePopupEdit}>Edit</button>
               {isOpenEdit ? <Popup toggle={togglePopupEdit} content={<h2>Edit</h2>}/> : null}
-              <button className="btn-delite">Delite</button>
+              
+              <button className="btn-delite" onClick={togglePopupDelete}>Delite</button>
               {isOpenDelete ? <Popup toggle={togglePopupDelete} content={<h2>Delete</h2>}/> : null}
           </div>
       </Container>
