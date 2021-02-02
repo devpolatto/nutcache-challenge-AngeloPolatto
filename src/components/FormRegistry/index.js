@@ -19,7 +19,7 @@ function FormRegistry() {
 
     try{
       const response = await API.post('/newuser', data);
-      alert(`usuario ${ data.name } registrado`)
+      //alert(`usuario ${ data.name } registrado`)
     } catch(err) {
       alert('erro no cadastro, tente novamente')
       console.log(err)

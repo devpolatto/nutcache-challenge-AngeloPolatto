@@ -27,7 +27,7 @@ function EmployeeItem(props) {
               {isOpenEdit ? <Popup toggle={togglePopupEdit} content={<FormUpdate/>}/> : null}
               
               <button className="btn-delite" onClick={togglePopupDelete}>Delite</button>
-              {isOpenDelete ? <Popup toggle={togglePopupDelete} content={<PopupConfirm/>}/> : null}
+              {isOpenDelete ? <Popup toggle={togglePopupDelete} content={<PopupConfirm propID={IdUser}/>}/> : null}
           </div>
       </Container>
   );
