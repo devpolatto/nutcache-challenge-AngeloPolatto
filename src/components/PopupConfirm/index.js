@@ -3,14 +3,12 @@ import API from '../../services/api';
 
 import { Container, Description } from './styles';
 
-function PopupConfirm(props) {
+function PopupConfirm({ propID, userName }) {
 
-  async function handleUserDelete(id){
-
-    await console.log(`user : ${id}`)
+  async function handleUserDelete(userID){
 
     try{
-      await API.delete(`/user/${id}`)
+      const response = await API.delete(`/user/${userID}`)
     } catch (err) {
       alert('Erro ao cadastrar')
     }
@@ -19,7 +17,7 @@ function PopupConfirm(props) {
   return(
       <Container>
           <Description>Are you sure you want to delete the user ?</Description>
-          <button className="confirm" onClick={() => handleUserDelete(props.propID)}>Yes!</button>
+          <button className="confirm" onClick={() => handleUserDelete(propID)}>Yes!</button>
       </Container>
   )
 }

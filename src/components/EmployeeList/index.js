@@ -14,9 +14,10 @@ function EmployeeList() {
   const [user, setUser] = useState([]);
 
   useEffect(() => {
-    API.get('/user').then( response => {
+    API.get('/user').then( ( response => {
       setUser(response.data)
-  })}, [user])
+    })) 
+  }, [])
 
   const [isOpen, setIsOpen] = useState(false)
 
