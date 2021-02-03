@@ -14,7 +14,7 @@ function FormRegistry() {
   const [ team , setTeam ] = useState('');
 
   async function handleNewUser(e) {
-    e.preventDefault();
+    //e.preventDefault();
     const data = { name, email, cpf, birthDate, gender, startDate, team }
 
     try{
