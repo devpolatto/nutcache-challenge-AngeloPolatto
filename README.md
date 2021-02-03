@@ -4,7 +4,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![image App](http://github.com/devpolatto/nutcache-challenge-AngeloPolatto/tree/master/src/assets/app.png)
+![image App](https://github.com/devpolatto/nutcache-challenge-AngeloPolatto/blob/master/src/assets/app.png?raw=true)
 
 **Available Scripts**
 
