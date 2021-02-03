@@ -17,6 +17,7 @@ export const Container = styled.div`
     margin-top: 20px;
 
     display: flex;
+    aling-items: center;
     justify-content: space-around;
     flex-direction: column;
 
@@ -62,12 +63,12 @@ export const Container = styled.div`
   }
 
   button{
-    height: 50px;
+    width: 100% !important;
+    height: 50px !important;
     color: #ffff;
     background: ${config.color.secondary};
     border-radius: 8px;
     border: none;
-    margin: 10px 0;
     cursor: pointer;
     transition: 0.3s;
 

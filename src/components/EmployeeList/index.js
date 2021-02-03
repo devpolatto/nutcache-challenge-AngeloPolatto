@@ -3,21 +3,21 @@ import Employeeitem from '../EmployeeItem';
 import Popup from '../Popup';
 import FormRegistry from '../FormRegistry';
 
-import db from '../../db.json';
+//import db from '../../db.json';
 
-// import API from '../../services/api';
+import API from '../../services/api';
 
 import { Container, Title, Header } from './styles';
 
 function EmployeeList() {
 
-  // const [user, setUser] = useState([]);
+  const [user, setUser] = useState([]);
 
-  // useEffect(() => {
-  //   API.get('/user').then( response => {
-  //     setUser(response.data)
-  //   })
-  // }, [user])
+  useEffect(() => {
+    API.get('/user').then( ( response => {
+      setUser(response.data)
+    })) 
+  }, [])
 
   const [isOpen, setIsOpen] = useState(false)
 
@@ -28,15 +28,15 @@ function EmployeeList() {
       <Header>
         <Title>Nutcache Employee Database</Title>
         <button className="buttonNewUser" onClick={togglePopup}>
-          NewUser
+          New User
         </button>
         {isOpen ? <Popup toggle={togglePopup} content={<FormRegistry/>}/> : null}
       </Header>
 
       <ul>
-        {db.map(db => (
-          <li key={db.id}>
-            <Employeeitem userName={db.Name}/>
+        {user.map(user => (
+          <li key={user.id}>
+            <Employeeitem propID={user.id} userName={user.name}/>
           </li>
         ))}
       </ul>

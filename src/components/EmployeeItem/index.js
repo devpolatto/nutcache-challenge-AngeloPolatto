@@ -1,28 +1,35 @@
 import React, { useState } from 'react';
 import Popup from '../Popup';
 
-import { Container, UserName, editButton } from './styles';
+import PopupConfirm from '../PopupConfirm';
+import FormUpdate from '../FormUpdate';
 
-function EmployeeItem(props) {
+import { Container, UserName } from './styles';
 
-    const [ isOpenDelete, setOpenDelete ] = useState(false);
-    const [ isOpenEdit, setOpenEdit ] = useState(false);
+function EmployeeItem({ propID, userName }) {
 
-    const togglePopupEdit = () => { setOpenEdit(!isOpenEdit) }
-    const togglePopupDelete = () => { setOpenDelete(!isOpenDelete) }
 
-    return (
-        <Container>
-            <UserName>{props.userName}</UserName>
-            <div className="options">
-                <button className="btn-edit" onClick={togglePopupEdit}>Edit</button>
-                {isOpenEdit ? <Popup toggle={togglePopupEdit} content={<h2>Edit</h2>}/> : null}
+    const [isOpenEdit, setIsOpenEdit] = useState(false)
+    const [isOpenDelete, setIsOpenDelete] = useState(false)
 
-                <button className="btn-delite" onClick={togglePopupDelete}>Delete</button>
-                {isOpenDelete ? <Popup toggle={togglePopupDelete} content={<h2>Delete</h2>}/> : null}
-            </div>
-        </Container>
-    );
+    const togglePopupEdit = () => { setIsOpenEdit(!isOpenEdit) }
+    const togglePopupDelete = () => { 
+        console.log(propID)
+        setIsOpenDelete(!isOpenDelete)  
+    }
+
+  return (
+      <Container>
+          <UserName>{userName}</UserName>
+          <div className="options">
+              <button className="btn-edit" onClick={togglePopupEdit}>Edit</button>
+              {isOpenEdit ? <Popup toggle={togglePopupEdit} content={<FormUpdate id={propID}/>}/> : null}
+              
+              <button className="btn-delite" onClick={togglePopupDelete}>Delite</button>
+              {isOpenDelete ? <Popup toggle={togglePopupDelete} content={<PopupConfirm propID={propID} userName={userName}/>}/> : null}
+          </div>
+      </Container>
+  );
 }
 
 export default EmployeeItem;
