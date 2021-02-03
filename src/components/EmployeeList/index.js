@@ -28,7 +28,7 @@ function EmployeeList() {
       <Header>
         <Title>Nutcache Employee Database</Title>
         <button className="buttonNewUser" onClick={togglePopup}>
-          NewUser
+          New User
         </button>
         {isOpen ? <Popup toggle={togglePopup} content={<FormRegistry/>}/> : null}
       </Header>

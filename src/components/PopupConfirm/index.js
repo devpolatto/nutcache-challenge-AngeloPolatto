@@ -3,12 +3,12 @@ import API from '../../services/api';
 
 import { Container, Description } from './styles';
 
-function PopupConfirm({ propID, userName }) {
+function PopupConfirm({ propID }) {
 
   async function handleUserDelete(userID){
 
     try{
-      const response = await API.delete(`/user/${userID}`)
+      const response = await API.delete(`/user/${userID}`);
     } catch (err) {
       alert('Erro ao cadastrar')
     }

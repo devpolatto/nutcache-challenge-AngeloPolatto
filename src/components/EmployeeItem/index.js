@@ -23,7 +23,7 @@ function EmployeeItem({ propID, userName }) {
           <UserName>{userName}</UserName>
           <div className="options">
               <button className="btn-edit" onClick={togglePopupEdit}>Edit</button>
-              {isOpenEdit ? <Popup toggle={togglePopupEdit} content={<FormUpdate/>}/> : null}
+              {isOpenEdit ? <Popup toggle={togglePopupEdit} content={<FormUpdate id={propID}/>}/> : null}
               
               <button className="btn-delite" onClick={togglePopupDelete}>Delite</button>
               {isOpenDelete ? <Popup toggle={togglePopupDelete} content={<PopupConfirm propID={propID} userName={userName}/>}/> : null}

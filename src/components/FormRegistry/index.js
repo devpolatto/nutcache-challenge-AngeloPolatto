@@ -39,7 +39,7 @@ function FormRegistry() {
           <LabelForm>Your E-mail</LabelForm>
           <input type="email" value={email} required onChange={e => setEmail(e.target.value)} />
           <LabelForm>Your CPF</LabelForm>
-          <input type="text" placeholder="EX: 000000-00" value={cpf} required onChange={e => setCPF(e.target.value)} />
+          <input type="text" value={cpf} required onChange={e => setCPF(e.target.value)} />
 
           <div className="input-group">
             <div className="date">
