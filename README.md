@@ -4,7 +4,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-<img src="C:\Users\Angelo Polatto\www\nutcache-challenge-AngeloPolatto\src\assets\app.png" alt="image APP" style="zoom:50%;" />
+![image App](https://github.com/devpolatto/nutcache-challenge-AngeloPolatto/tree/master/src/assets/app.png)
 
 **Available Scripts**
 
